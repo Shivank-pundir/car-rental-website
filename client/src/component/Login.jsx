@@ -41,8 +41,12 @@ const Login = () => {
 
         toast.success(data.message);
 
-        setShowLogin(false);
-        navigate("/login");
+        if (state === "register") {
+  setState("login");
+} else {
+  setShowLogin(false);
+  navigate("/");
+}
       } else {
         toast.error(data.message);
       }
